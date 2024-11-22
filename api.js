@@ -5,7 +5,8 @@ class WeatherAPI{
     }
 
     getWeatherInfo(cityName){
-        fetch(`${this.baseURL}?q${cityName}&appid=${this.apikey}&units=metric&lang=en`)
+        fetch(`${this.baseURL}?q${cityName}&appid=${this.apikey}&units=metric&lang=en`);
+        
 
     }
 }
