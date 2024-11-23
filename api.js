@@ -4,9 +4,13 @@ class WeatherAPI{
        this.apikey="0c0a08a0c0a534a719e2f97d00c3b9de";
     }
 
-    getWeatherInfo(cityName){
-        fetch(`${this.baseURL}?q${cityName}&appid=${this.apikey}&units=metric&lang=en`);
+    async getWeatherInfo(cityName){
         
+        const response=await fetch(`${this.baseURL}?q=${cityName}&appid=${this.apikey}&units=metric&lang=en`);
+        const data=await response.json();
+        return data;
+
+     
 
     }
 }
