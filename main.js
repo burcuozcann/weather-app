@@ -20,7 +20,7 @@ function findWeatherInfo(e){
 
     function display(data){
         cityNameEl.textContent=data.name;
-        degreeEl.textContent=data.main.temp;
+        degreeEl.textContent=Math.round(data.main.temp)+"°";
         descEl.textContent=data.weather[0].description;
 
 
